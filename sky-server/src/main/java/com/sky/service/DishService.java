@@ -50,4 +50,10 @@ public interface DishService {
     List<DishVO> listWithFlavor(Dish dish);
 
     List<Dish> list(Long categoryId);
+
+    /**
+     * 起售停售菜品
+     * @param status
+     */
+    void startOrStop(Integer status, Long id);
 }

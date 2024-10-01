@@ -199,4 +199,17 @@ public class DishServiceImpl implements DishService {
 
         return dishMapper.list(dish);
     }
+
+    /**
+     * 起售停售菜品
+     *
+     * @param status
+     */
+    public void startOrStop(Integer status, Long id) {
+        Dish dish = Dish.builder()
+                .id(id)
+                .status(status)
+                .build();
+        dishMapper.update(dish);
+    }
 }
